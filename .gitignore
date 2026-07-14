@@ -1,0 +1,13 @@
+# Keep this minimal. A generated deck is a deliverable: its config.js, notes.json,
+# assets (logos, music, …) and any exported PDF are part of the repo and SHOULD be
+# committed. Only ignore reinstallable / derived junk below.
+
+# Node / http-server (installed by `npm install`)
+node_modules/
+
+# Python venv used by the skill's Google/QR helper scripts (reinstallable)
+.venv/
+
+# macOS / build junk
+.DS_Store
+_export.html

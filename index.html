@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+<meta name="generator" content="owaspporto-presentation 2.2" />
+<title>OWASP Porto #12 — Cerberus</title>
+
+<link rel="stylesheet" href="vendor/reveal/reveal.css">
+<link rel="stylesheet" href="theme/owaspporto.css">
+
+<script src="config.js"></script>
+<script src="js/config-loader.js"></script>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <section data-transition="fade" class="slide-cover">
+    <div class="cover-photo" style="background-image:url('assets/cover.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center; background-color:#0B1442;"></div>
+    <div class="cover-panel">
+      <div class="cover-title">OWASP Porto</div>
+      <div class="cover-sub">#12 – Cerberus</div>
+      <div class="cover-when">July 15th<span class="sep">|</span>18:00<span class="sep">|</span>42 Porto, Porto</div>
+      <div class="cover-foot">
+        <div class="cover-support">
+          <div class="label">With support from</div>
+          <img src="assets/sponsors/42porto.png" alt="42 Porto" style="height:184px; width:auto;">
+        </div>
+        <div class="cover-brand">
+          <img src="assets/owasp-porto-black.png" alt="OWASP Porto" />
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade" class="slide-center">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="center-stack">
+      <h2 style="font-size:clamp(40px,4.4vw,60px);">OWASP Porto Chapter<br>#12 – Cerberus</h2>
+      <div class="owasp-lockup"><img src="assets/logo-owasp-white.png" alt="OWASP"/><span class="porto">Porto</span></div>
+      <h1 style="margin-top:8px;">Welcome!</h1>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Open Worldwide Application<br>Security Project (OWASP)</h2></div>
+      <p class="lead-paragraph"><strong>Nonprofit foundation</strong> that works to <strong>improve the security of software.</strong></p>
+      <p style="margin-top:18px;">Through:</p>
+      <ul style="margin-left:18px;">
+        <li>Open-source software projects</li>
+        <li>Educational and training conferences</li>
+        <li><span class="accent-orange">Local chapters (hundreds worldwide)</span></li>
+      </ul>
+      <p style="margin-top:22px; color:var(--muted); font-size:20px;">https://www.owasp.org/ &nbsp;·&nbsp; https://owasp.org/www-chapter-porto/</p>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Become a Member Today!</h2></div>
+      <ul style="margin-left:8px;">
+        <li>Networking!</li>
+        <li>Volunteer for your chapter or project</li>
+        <li>Discounts on Global AppSec events and training</li>
+        <li>Member Benefits &amp; GSuite account</li>
+        <li>Vote in our elections &amp; stand for the Board!</li>
+      </ul>
+      <p class="callout-foot">For Companies: Become a corporate supporter!</p>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>OWASP Porto Chapter:<br>Mission and Activities</h2></div>
+      <div class="two-col">
+        <div>
+          <div class="col-head">Why We Exist</div>
+          <ul>
+            <li>Build and strengthen the local/national appsec community</li>
+            <li>Raise appsec awareness across all stakeholders</li>
+            <li>Stimulate appsec-related projects</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-head">What We Do</div>
+          <ul>
+            <li>Organize regular meetups, workshops, and more</li>
+            <li>Spread the word and foster community connections</li>
+            <li>Provide support from the broader OWASP community</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>OWASP Porto Chapter: Who are we?</h2></div>
+      <div class="people" style="gap:16px;">
+        <div class="person"><img class="photo" style="width:88px;height:88px;border-radius:12px;object-fit:cover;border:1px solid var(--line);background:var(--navy-2);flex:0 0 auto;" src="assets/people/nuno.jpg" alt="Nuno Pereira"><div class="who"><div class="name">Nuno Pereira <span style="color:var(--muted);font-weight:600;">– Chapter Co-lead</span></div><div class="role">Professor @ ISEP</div></div></div>
+        <div class="person"><img class="photo" style="width:88px;height:88px;border-radius:12px;object-fit:cover;border:1px solid var(--line);background:var(--navy-2);flex:0 0 auto;" src="assets/people/wilberto.jpg" alt="Wilberto Filho"><div class="who"><div class="name">Wilberto Filho <span style="color:var(--muted);font-weight:600;">– Chapter Co-lead</span></div><div class="role">CEO &amp; Co-founder @ Blaze Information Security</div></div></div>
+        <div class="person"><img class="photo" style="width:88px;height:88px;border-radius:12px;object-fit:cover;border:1px solid var(--line);background:var(--navy-2);flex:0 0 auto;" src="assets/people/pedro.jpg" alt="Pedro Fortuna"><div class="who"><div class="name">Pedro Fortuna <span style="color:var(--muted);font-weight:600;">– Chapter Co-lead</span></div><div class="role">CTO &amp; Co-founder @ Jscrambler</div></div></div>
+      </div>
+      <div style="margin-top:20px;">
+        <div style="font-family:var(--font-display);font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;font-size:14px;margin-bottom:12px;">Chapter Volunteers</div>
+        <div style="display:flex;gap:46px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:12px;"><img style="width:64px;height:64px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:var(--navy-2);flex:0 0 auto;" src="assets/people/nikhil.jpg" alt="Nikhil Shirsath"><span style="font-family:var(--font-display);font-weight:700;color:var(--white);font-size:20px;">Nikhil Shirsath</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><img style="width:64px;height:64px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:var(--navy-2);flex:0 0 auto;" src="assets/people/tadeu.jpg" alt="Tadeu Freitas"><span style="font-family:var(--font-display);font-weight:700;color:var(--white);font-size:20px;">Tadeu Freitas</span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><img style="width:64px;height:64px;border-radius:10px;object-fit:cover;border:1px solid var(--line);background:var(--navy-2);flex:0 0 auto;" src="assets/people/clarisse.jpg" alt="Clarisse Carvalho"><span style="font-family:var(--font-display);font-weight:700;color:var(--white);font-size:20px;">Clarisse Carvalho</span></div>
+        </div>
+      </div>
+      <p class="people-cta">YOU? Contact us: porto-leaders@owasp.org</p>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Resources</h2></div>
+      <div class="resources" style="gap:15px;">
+        <div class="resource"><img src="assets/icons/home.png" style="width:48px;height:48px;object-fit:contain;flex:0 0 auto;"><span class="link">https://owasp.org/www-chapter-porto/</span></div>
+        <div class="resource"><img src="assets/icons/mail.png" style="width:48px;height:48px;object-fit:contain;flex:0 0 auto;"><span class="link">porto-leaders@owasp.org</span></div>
+        <div class="resource"><img src="assets/icons/linkedin.png" style="width:48px;height:48px;object-fit:contain;flex:0 0 auto;"><span class="link">https://www.linkedin.com/company/owasp-porto/</span></div>
+        <div class="resource"><img src="assets/icons/luma.png" style="width:48px;height:48px;object-fit:contain;flex:0 0 auto;"><span class="link">https://luma.com/owasp-porto</span><span class="badge" style="background:var(--orange);color:var(--navy-deep);transform:none;margin-left:14px;">🔔 SUBSCRIBE!</span></div>
+        <div class="resource"><img src="assets/icons/meetup.png" style="width:48px;height:48px;object-fit:contain;flex:0 0 auto;"><span class="link" style="text-decoration:line-through;color:var(--muted);">https://www.meetup.com/OWASP-Porto/</span><span style="margin-left:12px;color:var(--muted);font-style:italic;">retiring</span></div>
+        <div class="resource"><img src="assets/icons/slack.png" style="width:48px;height:48px;object-fit:contain;flex:0 0 auto;"><span class="link">owasp.slack.com #chapter-porto</span><span class="badge new">NEW</span></div>
+        <div class="resource"><span class="ico">𝕏</span><span class="link">@owaspporto</span></div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Event Archive</h2></div>
+      <div style="display:grid; grid-template-columns:1fr 1.7fr; gap:40px; align-items:center;">
+        <div>
+          <p>Browse talks, speakers, and photos from all <strong>11 events</strong> held in Porto, from <strong>2024 to May 2026</strong>.</p>
+          <p style="margin-top:28px; color:var(--muted); font-size:20px;">https://github.com/owasp-porto/event-archive</p>
+        </div>
+        <div>
+          <img src="assets/archive.png" alt="Event Archive screenshot" style="width:100%; border-radius:14px; border:1px solid var(--line);">
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Call for Talks</h2></div>
+      <div class="qr-wrap">
+        <div class="qr-box"><img src="assets/qr-callfortalks.png" alt="Call for Talks QR"></div>
+        <div class="qr-side">
+          <a class="qr-url" href="https://forms.gle/ASPjW7AafEFH7xkq6">https://forms.gle/ASPjW7AafEFH7xkq6</a>
+          <div class="qr-caption">We are ALWAYS looking for speakers!</div>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Event Name Riddle</h2></div>
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <p>Little wordplay/riddle in our meetup names.</p>
+          <p style="margin-top:18px;"><strong>#11 Déjà vu</strong> (previous meetup):</p>
+          <p>Eleven is spelled with two 1's — so the second one felt like... déjà vu. (Yes, we know. Bad pun.)</p>
+          <p style="margin-top:22px;">How about <strong>Cerberus</strong>?</p>
+        </div>
+        <div>
+          
+          <img src="assets/riddle.png" alt="" style="width:100%; border-radius:14px; border:1px solid var(--line);" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Next Meetup</h2></div>
+      <div class="kv">
+        <div class="k">Date:</div>  <div class="v">TBD &mdash; October/November 2026</div>
+        <div class="k">Venue:</div> <div class="v">Your Company/Institution?</div>
+      </div>
+      <p class="cta-line">Want to host us, or sponsor an event? Email to porto-leaders@owasp.org</p>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <span class="eyebrow orange">Porto, Portugal · September 23-24, 2026</span>
+      <div class="section-head" style="margin-bottom:20px;"><h2>AppSec Days Portugal 2026</h2></div>
+      <div style="display:grid; grid-template-columns: 1.05fr 1fr; gap:50px; align-items:start;">
+        <ul class="promo-hl">
+          <li>Targeting <span class="accent-blue">500+ participants</span> across <span class="accent-blue">2 tracks</span></li>
+          <li>Targeting <span class="accent-blue">15+ talks</span>, <span class="accent-blue">Trainings/Workshops</span> and a <span class="accent-blue">CTF</span></li>
+          <li><strong>Call for Papers &amp; Trainings is now closed!</strong></li>
+          <li>Early-bird tickets opening soon</li>
+          <li><strong>Looking for sponsors</strong></li>
+          <li>Call for Volunteers will be opening later in the year (stay tuned)</li>
+        </ul>
+        <div>
+          <div class="col-head" style="font-size:22px;margin-bottom:12px;">Keynotes</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="person"><img class="photo" style="width:82px;height:82px;border-radius:12px;object-fit:cover;border:1px solid var(--line);flex:0 0 auto;" src="assets/people/keynote1.jpg" alt="Lukas Weichselbaum"><div class="who"><div class="name" style="font-size:24px;">Lukas Weichselbaum</div><div class="role">Senior Staff Security Engineer &amp; Manager · Google Product Security</div></div></div>
+            <div class="person"><img class="photo" style="width:82px;height:82px;border-radius:12px;object-fit:cover;border:1px solid var(--line);flex:0 0 auto;" src="assets/people/keynote2.jpg" alt="Petra Vukmirovic"><div class="who"><div class="name" style="font-size:24px;">Petra Vukmirovic</div><div class="role">Head of Information Security · Numan</div></div></div>
+          </div>
+          <div style="margin-top:34px;">
+            <div class="col-head" style="font-size:15px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Sponsors</div>
+            <div style="display:flex;flex-direction:column;gap:13px;">
+            <div style="display:flex;align-items:center;gap:14px;"><span style="flex:0 0 104px;text-align:right;white-space:nowrap;font-family:var(--font-display);font-weight:800;font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:#7FD8FF;">Diamond</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="background:#fff;border-radius:7px;padding:7px 11px;display:inline-flex;align-items:center;"><img src="assets/sponsors/devoteam.png" alt="Devoteam Cyber Trust" style="max-height:46px;max-width:211px;object-fit:contain;display:block;"></span><span style="background:#fff;border-radius:7px;padding:7px 11px;display:inline-flex;align-items:center;"><img src="assets/sponsors/nos.png" alt="NOS" style="max-height:46px;max-width:120px;object-fit:contain;display:block;"></span><span style="background:#fff;border-radius:7px;padding:7px 11px;display:inline-flex;align-items:center;"><img src="assets/sponsors/cloudflare.png" alt="Cloudflare" style="max-height:46px;max-width:160px;object-fit:contain;display:block;"></span></span></div>
+            <div style="display:flex;align-items:center;gap:14px;"><span style="flex:0 0 104px;text-align:right;white-space:nowrap;font-family:var(--font-display);font-weight:800;font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:#CFD6E6;">Platinum</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="background:#fff;border-radius:7px;padding:6px 10px;display:inline-flex;align-items:center;"><img src="assets/sponsors/snyk.png" alt="Snyk" style="max-height:39px;max-width:179px;object-fit:contain;display:block;"></span></span></div>
+            <div style="display:flex;align-items:center;gap:14px;"><span style="flex:0 0 104px;text-align:right;white-space:nowrap;font-family:var(--font-display);font-weight:800;font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:#E6C24A;">Gold</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/checkmarx.png" alt="Checkmarx" style="max-height:33px;max-width:151px;object-fit:contain;display:block;"></span><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/blaze.png" alt="Blaze" style="max-height:33px;max-width:110px;object-fit:contain;display:block;"></span></span></div>
+            <div style="display:flex;align-items:center;gap:14px;"><span style="flex:0 0 104px;text-align:right;white-space:nowrap;font-family:var(--font-display);font-weight:800;font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:#AEB6D8;">Silver</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/celfocus.jpg" alt="Celfocus" style="max-height:27px;max-width:124px;object-fit:contain;display:block;"></span><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/infineon.jpg" alt="Infineon" style="max-height:27px;max-width:124px;object-fit:contain;display:block;"></span><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/jscrambler.png" alt="Jscrambler" style="max-height:27px;max-width:124px;object-fit:contain;display:block;"></span></span></div>
+            <div style="display:flex;align-items:center;gap:14px;"><span style="flex:0 0 104px;text-align:right;white-space:nowrap;font-family:var(--font-display);font-weight:800;font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:#9AA3C7;">Community</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/ap2si.png" alt="AP2SI" style="max-height:22px;max-width:101px;object-fit:contain;display:block;"></span></span></div>
+            <div style="display:flex;align-items:center;gap:14px;"><span style="flex:0 0 104px;text-align:right;white-space:nowrap;font-family:var(--font-display);font-weight:800;font-size:10px;letter-spacing:0.10em;text-transform:uppercase;color:#F5821F;">Speaker Dinner</span><span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"><span style="background:#fff;border-radius:7px;padding:5px 9px;display:inline-flex;align-items:center;"><img src="assets/sponsors/brightpixel.png" alt="Bright Pixel" style="max-height:22px;max-width:130px;object-fit:contain;display:block;"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="promo-foot" style="margin-top:14px;"><a class="qr-url" href="https://appsecdays.pt">https://appsecdays.pt</a></p>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade" class="slide-center">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="center-stack"><h1>Today's event</h1></div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade" class="slide-light slide-center">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="center-stack">
+      <h1 style="font-size:clamp(44px,5vw,72px); color:#0B1442;">This meetup is supported by</h1>
+      <div style="display:flex; gap:96px; align-items:center; justify-content:center; margin-top:30px; flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <img src="assets/sponsors/42porto.png" alt="42 Porto" style="max-height:150px; max-width:480px;">
+          <div style="margin-top:16px; font-weight:700; color:#5B6075; letter-spacing:0.14em; text-transform:uppercase; font-size:15px;">Venue</div>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Today's Agenda</h2></div>
+      <div class="agenda">
+        <div class="agenda-row"><span class="time">18:00</span><div class="talk"><div class="t">Intro and Welcome by the OWASP Porto chapter leadership</div></div><span></span></div>
+        <div class="agenda-row"><span class="time">18:15</span><div class="talk"><div class="t">Ransomware in the Wild: Behavioral Insights and the Road to Resilient Defense</div><div class="by">by Tânia Esteves</div></div><img class="face" src="assets/people/speaker1.jpg" alt="" onerror="this.style.visibility='hidden'"></div>
+        <div class="agenda-row"><span class="time">19:00</span><div class="talk"><div class="t">Poisoned Workspaces – How to abuse and defend against developer targeted attacks</div><div class="by">by Luis Fontes</div></div><img class="face" src="assets/people/speaker2.jpg" alt="" onerror="this.style.visibility='hidden'"></div>
+        <div class="agenda-row"><span class="time">20:00</span><div class="talk"><div class="t">Food and Drinks</div></div><span></span></div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade" class="slide-center">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="center-stack"><h1>Thanks for Coming Today!</h1><p style="font-size:clamp(24px,2vw,32px); color:var(--muted);">We hope you enjoy the event</p></div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="centered-vert">
+      <div class="section-head"><h2>Your feedback is very important!</h2></div>
+      <div class="qr-wrap">
+        <div class="qr-box"><img src="assets/qr-feedback.png" alt="Feedback form QR"></div>
+        <div class="qr-side">
+          <a class="qr-url" href="https://forms.gle/7SV6VzUhoMHcCKVE9">https://forms.gle/7SV6VzUhoMHcCKVE9</a>
+          <div class="owasp-lockup" style="margin-top:34px;"><img src="assets/owasp-porto-white.png" alt="OWASP Porto" style="height:90px; width:auto;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  <section data-transition="fade" class="slide-center">
+    <div class="slide-chrome-top"><div class="brand"><img class="mark mark-light" src="assets/symbol-white.png" alt="OWASP Porto"/><img class="mark mark-dark" src="assets/symbol-black.png" alt="OWASP Porto"/></div></div>
+    <div class="center-stack"><h1>Thank You!</h1></div>
+    <div class="progress-bar">
+      <span class="seg sec-welcome" data-from="0"  data-to="2"  style="flex:2"><span class="seg-label">Welcome</span><span class="seg-bar"></span></span>
+      <span class="seg sec-owasp"   data-from="2"  data-to="4"  style="flex:2"><span class="seg-label">OWASP</span><span class="seg-bar"></span></span>
+      <span class="seg sec-event"   data-from="4"  data-to="9"  style="flex:5"><span class="seg-label">Porto Chapter</span><span class="seg-bar"></span></span>
+      <span class="seg sec-next"    data-from="9"  data-to="11" style="flex:2"><span class="seg-label">Next</span><span class="seg-bar"></span></span>
+      <span class="seg sec-news"    data-from="11" data-to="12" style="flex:1"><span class="seg-label">News</span><span class="seg-bar"></span></span>
+      <span class="seg sec-talks"   data-from="12" data-to="15" style="flex:3"><span class="seg-label">Today&#39;s Event</span><span class="seg-bar"></span></span>
+      <span class="seg sec-close"   data-from="15" data-to="18" style="flex:3"><span class="seg-label">Close</span><span class="seg-bar"></span></span>
+    </div>
+  </section>
+
+  </div>
+</div>
+
+<script src="vendor/reveal/reveal.js"></script>
+<script src="vendor/reveal/plugin/notes/notes.js"></script>
+<script src="js/keyboard-fix.js"></script>
+<script src="js/notes-loader.js"></script>
+<script src="js/custom-animations.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/space-repel.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/help-dialog.js"></script>
+<script>
+  const _cfg = window.AllStaffConfig || {};
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    controls: true,
+    progress: false,                /* we draw our own sectioned progress bar */
+    history: true,
+    transition: 'fade',
+    transitionSpeed: 'default',
+    width: 1440,
+    height: 900,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 1.6,
+    autoAnimateEasing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+    autoAnimateDuration: 0.7,
+    fragments: !!_cfg.fragmentsEnabled,
+    keyboard: { 72: null, 74: null, 75: null, 76: null, 78: null, 80: null },
+    plugins: [ RevealNotes ]
+  });
+</script>
+</body>
+</html>

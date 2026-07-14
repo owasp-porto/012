@@ -1,0 +1,23 @@
+{
+  "_comment": "Speaker notes + per-slide titles for OWASP Porto #12 – Cerberus (18 slides). Loaded by js/notes-loader.js. Sections: Welcome(0-1) · OWASP(2-3) · Porto Chapter(4-8) · Next(9-10) · News(11) · Today's Event(12-14) · Close(15-17).",
+  "slides": [
+    { "index": 0,  "title": "Cover",            "notes": "Hold on the cover while people settle — OWASP Porto #12 – Cerberus, July 15th, 18:00, at 42 Porto. Venue by 42 Porto." },
+    { "index": 1,  "title": "Welcome",          "notes": "Welcome everyone to the OWASP Porto Chapter meetup, #12 – Cerberus." },
+    { "index": 2,  "title": "About OWASP",      "notes": "One line on what OWASP is: a nonprofit improving software security through open-source projects, conferences and local chapters." },
+    { "index": 3,  "title": "Become a Member",  "notes": "Encourage membership; mention the corporate-supporter ask for companies in the room." },
+    { "index": 4,  "title": "Mission",          "notes": "Porto Chapter — why we exist / what we do. Keep it brief." },
+    { "index": 5,  "title": "Who Are We",       "notes": "Introduce the chapter leads and volunteers; invite the audience to get involved." },
+    { "index": 6,  "title": "Resources",        "notes": "Where to find us: site, email, LinkedIn, Luma (subscribe!), Slack, X. Meetup is retiring." },
+    { "index": 7,  "title": "Event Archive",    "notes": "11 events held in Porto so far, from 2024 to May 2026 — point to the event-archive repo for talks, speakers and photos." },
+    { "index": 8,  "title": "Call for Talks",   "notes": "We are always looking for speakers — scan the QR or use the link." },
+    { "index": 9,  "title": "Name Riddle",      "notes": "Recap the previous one: #11 Déjà vu, because eleven has two 1's (bad pun, own it). This time the cognome is 'Cerberus' — leave the audience guessing why." },
+    { "index": 10, "title": "Next Meetup",      "notes": "Next meetup date still TBD, targeting October/November 2026; venue not yet confirmed — ask for hosts/sponsors." },
+    { "index": 11, "title": "AppSec Days",      "notes": "Promote AppSec Days Portugal (Porto, Sep 23-24, 2026): 500+ participants, keynotes Lukas Weichselbaum (Google) & Petra Vukmirovic (Numan). Sponsors: Diamond Devoteam/NOS/Cloudflare, Platinum Snyk, Gold Checkmarx/Blaze, Silver Celfocus/Infineon/Jscrambler, Community AP2SI, plus Bright Pixel as Speaker Dinner sponsor." },
+    { "index": 12, "title": "Today's Event",    "notes": "Divider — hand over to today's programme." },
+    { "index": 13, "title": "Supported By",     "notes": "Thank 42 Porto for hosting tonight's meetup." },
+    { "index": 14, "title": "Agenda",           "notes": "18:00 welcome · 18:15 Tânia Esteves (Ransomware in the Wild) · 19:00 Luis Fontes (Poisoned Workspaces) · 20:00 dinner & drinks." },
+    { "index": 15, "title": "Thanks",           "notes": "Thank attendees; we hope they enjoy the event." },
+    { "index": 16, "title": "Feedback",         "notes": "Ask everyone to fill the feedback form — scan the QR (https://forms.gle/7SV6VzUhoMHcCKVE9)." },
+    { "index": 17, "title": "Thank You",        "notes": "Close — thank the speakers and 42 Porto once more." }
+  ]
+}
