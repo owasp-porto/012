@@ -1,5 +1,5 @@
 {
-  "_comment": "Speaker notes + per-slide titles for OWASP Porto #12 – Cerberus (18 slides). Loaded by js/notes-loader.js. Sections: Welcome(0-1) · OWASP(2-3) · Porto Chapter(4-8) · Next(9-10) · News(11) · Today's Event(12-14) · Close(15-17).",
+  "_comment": "Speaker notes + per-slide titles for OWASP Porto #12 – Cerberus (19 slides). Loaded by js/notes-loader.js. Sections: Welcome(0-1) · OWASP(2-3) · Porto Chapter(4-8) · Next(9-10) · News(11) · Today's Event(12-14) · Close(15-18).",
   "slides": [
     { "index": 0,  "title": "Cover",            "notes": "Hold on the cover while people settle — OWASP Porto #12 – Cerberus, July 15th, 18:00, at 42 Porto. Venue by 42 Porto." },
     { "index": 1,  "title": "Welcome",          "notes": "Welcome everyone to the OWASP Porto Chapter meetup, #12 – Cerberus." },
@@ -17,7 +17,8 @@
     { "index": 13, "title": "Supported By",     "notes": "Thank 42 Porto for hosting tonight's meetup." },
     { "index": 14, "title": "Agenda",           "notes": "18:00 welcome · 18:15 Tânia Esteves (Ransomware in the Wild) · 19:00 Luis Fontes (Poisoned Workspaces) · 20:00 dinner & drinks." },
     { "index": 15, "title": "Thanks",           "notes": "Thank attendees; we hope they enjoy the event." },
-    { "index": 16, "title": "Feedback",         "notes": "Ask everyone to fill the feedback form — scan the QR (https://forms.gle/7SV6VzUhoMHcCKVE9)." },
-    { "index": 17, "title": "Thank You",        "notes": "Close — thank the speakers and 42 Porto once more." }
+    { "index": 16, "title": "AppSec Days Voucher", "notes": "Exclusive perk for the OWASP Porto community: use code OWASP-PORTO at checkout on appsecdays.pt for 25% off OWASP AppSec Days Portugal 2026 (Porto, Sep 23-24). Code is community-only — share it with the room." },
+    { "index": 17, "title": "Feedback",         "notes": "Ask everyone to fill the feedback form — scan the QR (https://forms.gle/7SV6VzUhoMHcCKVE9)." },
+    { "index": 18, "title": "Thank You",        "notes": "Close — thank the speakers and 42 Porto once more." }
   ]
 }
